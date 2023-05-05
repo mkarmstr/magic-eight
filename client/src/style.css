@@ -1,0 +1,312 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+.app {
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    top: 50%;
+    left: 50%;
+    color: black;
+
+  }
+  
+  body {
+    background-color: #0f0f19;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  
+  .container {
+    text-align: center;
+    max-width: 500px;
+    /* padding: 20px; */
+    font-weight: 200;
+  }
+  
+  .header {
+    margin-bottom: 10px;
+    font-weight: 200;
+  }
+  
+  .header h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1));
+  }
+  
+
+  .gamecontainer {
+    
+    font-weight: 200;
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 30px; */
+  }
+  
+  .question {
+    min-width: 100px;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    margin-bottom: 10px;
+  }
+  
+  .left {
+    min-width: 350px;
+    /* border: 1px solid #ffffff; */
+    border-radius: 10px;
+    /* margin: 10px; */
+    padding: 10px;
+    
+    /* background-color: #3e3e3e; */
+    color: #ffffff;
+    display: block;
+    /* opacity: 70%; */
+  }
+  
+  .left.show {
+    display: block;
+  }
+  
+  .left-panel.show {
+    display: block;
+  }
+  
+  .left-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    display: block;
+    opacity: 100%;
+    height: 50vh;
+    overflow-y: scroll; /* Use "scroll" instead of "auto" */
+    padding: 10px;
+  }
+  
+  .left-text {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 100%;
+  }
+  
+  .left-button {
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    opacity: 100%;
+    border: none;
+  }
+  
+  .left-button:hover {
+    color: #00ffff;
+    opacity: 0.8;
+  }
+  
+  .right {
+    min-width: 350px;
+    /* border: 1px solid #ffffff; */
+    border-radius: 10px;
+    /* margin: 10px; */
+    padding: 10px;
+    /* background-color: #3e3e3e; */
+    color: #ffffff;
+    display: block;
+    /* opacity: 70%; */
+  }
+  
+  .right.show {
+    display: block;
+
+  }
+  
+  .right-panel.show {
+    display: block;
+  }
+  
+  .right-content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: block;
+    opacity: 100%;
+  }
+  
+  .right-text {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 100%;
+  }
+  
+  .right-button {
+    /* padding: 10px 20px; */
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    opacity: 100%;
+    border: none;
+  }
+  
+  .right-button:hover {
+    color: #00ffff;
+    opacity: 0.8;
+  }
+  
+  
+  .game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .ball-container {
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ball {
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ball .answer-text {
+    margin: 0px;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: 16px;
+    position: absolute;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff, 0 0 70px #00ffff;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 150px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  
+.imgBall {
+    max-width: 300px;
+    /* Add the glow effect */
+    /* filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.7)); */
+    transition: filter 0.5s ease-in-out;
+  }
+  
+  .imgBall.glow {
+    /* Adjust the glow effect when the ball is glowing */
+    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1));
+  }
+  
+.shake {
+    animation: shake 1s infinite;
+}
+
+.button-noshake {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 1));
+}
+.button-noshake.shake {
+    animation: none !important;
+    transform: none !important;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    20% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    30% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    40% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    50% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    70% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    80% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+
+    90% {
+        transform: translate(-10px, 0) rotate(-10deg);
+    }
+
+    100% {
+        transform: translate(10px, 0) rotate(10deg);
+    }
+}
+
+.answers {
+    font-size: 14px;
+    margin-top: 10px;
+    /* line-height: 1; */
+    color:#00ffff
+}
